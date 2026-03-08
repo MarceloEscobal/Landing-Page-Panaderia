@@ -8,7 +8,7 @@ const products = [
         description: "Corteza crujiente y miga suave con el toque ácido perfecto.",
         price: 16.50,
         category: "panes",
-        image: "https://images.unsplash.com/photo-1589367920969-ab8e05030bc2?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
         available: true
     },
     {
@@ -26,16 +26,16 @@ const products = [
         description: "Cubiertos con ganache de chocolate belga.",
         price: 13.00,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1510252554792-74d6434316ae?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
         available: true
     },
     {
         id: 4,
-        name: "Tarta de Frustas",
+        name: "Tarta de Frutas",
         description: "Frutas frescas de la mejor calidad.",
         price: 19.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1464305795204-6f5bdf7f8740?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80",
         available: false
     },
     {
@@ -44,7 +44,7 @@ const products = [
         description: "Suaves con glaseado de queso crema.",
         price: 11.00,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=80",
+        image: "https://images.pexels.com/photos/1120464/pexels-photo-1120464.jpeg?auto=compress&cs=tinysrgb&w=800",
         available: true
     },
     {
@@ -53,7 +53,7 @@ const products = [
         description: "Cargados de arándanos frescos.",
         price: 9.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1607958674115-05b148067426?w=800&q=80",
+        image: "https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=800",
         available: true
     },
     {
@@ -62,7 +62,7 @@ const products = [
         description: "Chocolate, crema y cerezas.",
         price: 45.00,
         category: "tortas",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=800&q=80",
         available: true
     },
     {
@@ -71,7 +71,7 @@ const products = [
         description: "Suave crema con reducción de maracuyá.",
         price: 18.00,
         category: "postres",
-        image: "https://images.unsplash.com/photo-1524351114678-838bc863388a?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&q=80",
         available: true
     },
     {
@@ -80,7 +80,7 @@ const products = [
         description: "Especial con toque de especias.",
         price: 12.50,
         category: "embutidos",
-        image: "https://images.unsplash.com/photo-1601356616077-6957284f72f1?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&q=80",
         available: true
     },
     {
@@ -89,7 +89,7 @@ const products = [
         description: "Granos selectos recién molidos.",
         price: 6.50,
         category: "bebidas",
-        image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80",
         available: true
     }
 ];
