@@ -86,6 +86,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -94,6 +95,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, .logo {
@@ -150,70 +152,6 @@ nav {
     color: var(--primary);
 }
 
-/* Header Responsiveness Fix */
-@media (max-width: 900px) {
-    .shop-status {
-        display: none;
-    }
-    
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    nav {
-        gap: 1rem;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        flex-direction: column;
-        padding: 2rem;
-        gap: 1.5rem;
-        text-align: center;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex !important;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .menu-toggle .bar {
-        width: 25px;
-        height: 3px;
-        background: var(--primary-dark);
-        border-radius: 2px;
-        transition: var(--transition);
-    }
-}
-
-@media (max-width: 480px) {
-    .cart-trigger {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.2rem !important;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-}
-
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -245,14 +183,14 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     margin-bottom: 1.5rem;
     line-height: 1.1;
     animation: fadeInUp 1s ease-out;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     max-width: 600px;
     margin: 0 auto 2.5rem;
     opacity: 0.9;
@@ -285,7 +223,7 @@ nav {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: 4rem;
     position: relative;
 }
@@ -301,8 +239,8 @@ nav {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .product-card {
@@ -513,7 +451,22 @@ footer {
     }
 }
 
+@media (max-width: 900px) {
+    .shop-status {
+        display: none !important;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    nav {
+        gap: 0.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
