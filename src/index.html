@@ -8,21 +8,37 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
     <header>
         <nav class="container">
             <div class="logo">El Trigo de Oro</div>
+            
+            <div class="shop-status">
+                <span id="shop-status-dot" class="status-dot"></span>
+                <span id="shop-status-text">Cargando...</span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li>
+                    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar Tema">🌓</button>
+                </li>
             </ul>
+
+            <div class="cart-trigger" onclick="document.getElementById('cart-modal').classList.toggle('active')">
+                🛒 Carrito <span id="cart-count">0</span>
+            </div>
+
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -34,142 +50,92 @@
     <main>
         <section id="inicio" class="hero">
             <div class="hero-content container">
-                <h1>Tradición que se siente en cada mordida</h1>
-                <p>Descubre el sabor auténtico del pan artesanal, hecho con amor y los mejores ingredientes naturales.
-                </p>
-                <a href="#productos" class="btn">Ver Productos</a>
+                <h1 data-aos="fade-down">Tradición que se siente en cada mordida</h1>
+                <p data-aos="fade-up">Descubre el sabor auténtico del pan artesanal, hecho con amor y los mejores ingredientes naturales.</p>
+                <a href="#productos" class="btn" data-aos="zoom-in">Ver Productos</a>
             </div>
         </section>
 
         <section id="productos" class="products container">
             <h2 class="section-title">Nuestras Delicias</h2>
-            <div class="product-grid">
-                <!-- Producto 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/sourdough.png" alt="Pan de Masa Madre">
-                        <span class="status available">Disponible</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Pan de Masa Madre</h3>
-                        <p>Corteza crujiente y miga suave con el toque ácido perfecto.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 16.50</span>
-                            <a href="https://wa.me/51959007619?text=Hola,%20quisiera%20pedir%20el%20Pan%20de%20Masa%20Madre" class="order-btn" target="_blank">Hacer pedido</a>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="filters-container">
+                <button class="filter-btn active" data-category="todos" onclick="filterCategory('todos')">Todos</button>
+                <button class="filter-btn" data-category="panes" onclick="filterCategory('panes')">Panes</button>
+                <button class="filter-btn" data-category="pasteleria" onclick="filterCategory('pasteleria')">Pastelería</button>
+            </div>
 
-                <!-- Producto 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/croissants.png" alt="Croissants de Mantequilla">
-                        <span class="status available">Disponible</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Croissants Franceses</h3>
-                        <p>Laminados a mano con mantequilla premium para una textura hojaldrada.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 10.50</span>
-                            <a href="https://wa.me/51959007619?text=Hola,%20quisiera%20pedir%20los%20Croissants%20Franceses" class="order-btn" target="_blank">Hacer pedido</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Se llenará dinámicamente con JS -->
+            </div>
+        </section>
 
-                <!-- Producto 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/eclairs.png" alt="Eclairs de Chocolate">
-                        <span class="status available">Disponible</span>
+        <section class="testimonials container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="swiper-container testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Sample Testimonial 1 -->
+                    <div class="swiper-slide card">
+                        <div class="testimonial-card">
+                            <p>"El mejor pan de masa madre de la ciudad. Siempre fresco."</p>
+                            <h4>- Maria R.</h4>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3>Eclairs de Chocolate</h3>
-                        <p>Rellenos de crema pastelera y cubiertos con ganache de chocolate belga.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 13.00</span>
-                            <a href="https://wa.me/51959007619?text=Hola,%20quisiera%20pedir%20los%20Eclairs%20de%20Chocolate" class="order-btn" target="_blank">Hacer pedido</a>
+                    <!-- Sample Testimonial 2 -->
+                    <div class="swiper-slide card">
+                        <div class="testimonial-card">
+                            <p>"Los croissants me transportan a París. ¡Riquísimos!"</p>
+                            <h4>- Juan P.</h4>
+                        </div>
+                    </div>
+                    <!-- Sample Testimonial 3 -->
+                    <div class="swiper-slide card">
+                        <div class="testimonial-card">
+                            <p>"Atención de primera y productos de calidad suprema."</p>
+                            <h4>- Lucia S.</h4>
                         </div>
                     </div>
                 </div>
-
-                <!-- Producto 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/fruit_tart.png" alt="Tarta de Frutas">
-                        <span class="status sold-out">Agotado</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Tarta de Frutas de Estación</h3>
-                        <p>Base de masa quebrada con crema de vainilla y frutas frescas.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 19.50</span>
-                            <span class="order-btn disabled">Agotado</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 5 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/cinnamon_rolls.png" alt="Rollos de Canela">
-                        <span class="status available">Disponible</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Rollos de Canela</h3>
-                        <p>Suaves y esponjosos con un glaseado de queso crema irresistible.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 11.00</span>
-                            <a href="https://wa.me/51959007619?text=Hola,%20quisiera%20pedir%20los%20Rollos%20de%20Canela" class="order-btn" target="_blank">Hacer pedido</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 6 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="assets/muffins.png" alt="Muffins de Arándanos">
-                        <span class="status available">Disponible</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Muffins de Arándanos</h3>
-                        <p>Cargados de arándanos frescos y un toque de limón.</p>
-                        <div class="product-footer">
-                            <span class="price">S/ 9.50</span>
-                            <a href="https://wa.me/51959007619?text=Hola,%20quisiera%20pedir%20los%20Muffins%20de%20Arándanos" class="order-btn" target="_blank">Hacer pedido</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
         <section id="nosotros" class="about">
             <div class="container about-grid">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right">
                     <h2 class="section-title">Sobre Nosotros</h2>
-                    <p>En <strong>El Trigo de Oro</strong>, creemos que el pan es más que alimento; es una tradición que
-                        une familias. Desde 1985, hemos perfeccionado nuestras recetas utilizando procesos de
-                        fermentación lenta y granos locales.</p>
-                    <p>Nuestra misión es llevar la calidez de un horno tradicional a cada mesa, manteniendo la esencia
-                        de la panadería artesanal en un mundo moderno.</p>
+                    <p>En <strong>El Trigo de Oro</strong>, creemos que el pan es más que alimento; es una tradición que une familias.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number">35+</span>
                             <span class="stat-label">Años de Tradición</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Natural</span>
-                        </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="assets/sourdough.png" alt="Nuestro Horno" class="rounded-img">
+                <div class="about-image" data-aos="fade-left">
+                     <img src="assets/sourdough.png" alt="Nuestro Horno" class="rounded-img">
                 </div>
             </div>
         </section>
+
+        <section class="container">
+            <h2 class="section-title">Encuéntranos</h2>
+            <div id="map"></div>
+        </section>
     </main>
 
-    <footer id="contacto">
+    <!-- Cart Modal -->
+    <div id="cart-modal">
+        <h3>Tu Pedido</h3>
+        <div id="cart-items-list"></div>
+        <div class="cart-footer">
+            <strong>Total: <span id="cart-total">S/ 0.00</span></strong>
+            <button class="btn" style="width: 100%; margin-top: 1rem;" onclick="checkoutWhatsApp()">Hacer pedido por WhatsApp</button>
+            <button class="filter-btn" style="width: 100%; margin-top: 0.5rem;" onclick="document.getElementById('cart-modal').classList.remove('active')">Cerrar</button>
+        </div>
+    </div>
+
+    <footer>
         <div class="container footer-content">
             <div class="footer-info">
                 <div class="logo">El Trigo de Oro</div>
@@ -179,14 +145,8 @@
                 <h3>Contacto</h3>
                 <ul>
                     <li>📍 Calle las Flores 123, Ciudad</li>
-                    <li>📞 +51 987 654 321</li>
-                    <li>✉️ hola@trigodeoro.com</li>
+                    <li>📞 +51 959007619</li>
                 </ul>
-            </div>
-            <div class="footer-hours">
-                <h3>Horario</h3>
-                <p>Lun - Sáb: 7:00 AM - 8:00 PM</p>
-                <p>Dom: 7:00 AM - 1:00 PM</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -194,6 +154,11 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.querySelector('.nav-links');
@@ -204,7 +169,7 @@
         });
     </script>
 
-    <a href="https://wa.me/51959007619" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/51959007619" class="whatsapp-float" target="_blank" aria-label="Dudas por WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086.158.058 1.011.477 1.184.564.173.087.289.129.332.202.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.655 1.446 5.162L2 22l4.985-1.313C8.361 21.515 10.103 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.634 0-3.15-.429-4.462-1.178l-.32-.183-2.31.608.618-2.258-.201-.32A7.957 7.957 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
         </svg>
