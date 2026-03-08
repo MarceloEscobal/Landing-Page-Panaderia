@@ -55,6 +55,42 @@ const products = [
         category: "pasteleria",
         image: "assets/muffins.png",
         available: true
+    },
+    {
+        id: 7,
+        name: "Selva Negra",
+        description: "Clásica torta de chocolate con crema y cerezas.",
+        price: 45.00,
+        category: "tortas",
+        image: "assets/black_forest.png",
+        available: true
+    },
+    {
+        id: 8,
+        name: "Cheesecake de Maracuyá",
+        description: "Base crocante con crema suave y reducción de maracuyá.",
+        price: 18.00,
+        category: "postres",
+        image: "assets/cheesecake.png",
+        available: true
+    },
+    {
+        id: 9,
+        name: "Jamón del País",
+        description: "Artesanal, con el toque justo de especias.",
+        price: 12.50,
+        category: "embutidos",
+        image: "assets/jamon.png",
+        available: true
+    },
+    {
+        id: 10,
+        name: "Café Americano",
+        description: "Granos selectos recién molidos.",
+        price: 6.50,
+        category: "bebidas",
+        image: "assets/coffee.png",
+        available: true
     }
 ];
 
@@ -189,7 +225,7 @@ function updateCartUI() {
                 <div class="cart-item">
                     <span>${item.name} x${item.quantity}</span>
                     <span>S/ ${(item.price * item.quantity).toFixed(2)}</span>
-                    <button onclick="removeFromCart(${item.id})">×</button>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">×</button>
                 </div>
             `).join('');
         }
@@ -217,13 +253,25 @@ window.checkoutWhatsApp = () => {
  */
 function initTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon();
 }
 
 window.toggleTheme = () => {
     currentTheme = currentTheme === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', currentTheme);
     localStorage.setItem('bakery-theme', currentTheme);
+    updateThemeIcon();
 };
+
+function updateThemeIcon() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.innerHTML = currentTheme === 'light' 
+        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>'
+        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+    
+    btn.style.color = currentTheme === 'light' ? '#2c1e1a' : '#ffffff';
+}
 
 /**
  * Initializers for Libraries
@@ -238,13 +286,15 @@ function initMaps() {
     const mapElement = document.getElementById('map');
     if (!mapElement || typeof L === 'undefined') return;
 
-    const map = L.map('map').setView([-12.0464, -77.0428], 15); // Example: Lima, Peru
+    const lat = -8.11599;
+    const lng = -79.02998;
+    const map = L.map('map').setView([lat, lng], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap creators'
     }).addTo(map);
 
-    L.marker([-12.0464, -77.0428]).addTo(map)
-        .bindPopup('<b>El Trigo de Oro</b><br>Calle las Flores 123')
+    L.marker([lat, lng]).addTo(map)
+        .bindPopup('<b>El Trigo de Oro</b><br>Trujillo, Perú')
         .openPopup();
 }
 
