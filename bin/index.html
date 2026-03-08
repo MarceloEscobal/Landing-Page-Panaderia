@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Artesanal - El Trigo de Oro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">El Trigo de Oro</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content container">
+                <h1>Tradición que se siente en cada mordida</h1>
+                <p>Descubre el sabor auténtico del pan artesanal, hecho con amor y los mejores ingredientes naturales.</p>
+                <a href="#productos" class="btn">Ver Productos</a>
+            </div>
+        </section>
+
+        <section id="productos" class="products container">
+            <h2 class="section-title">Nuestras Delicias</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/sourdough.png" alt="Pan de Masa Madre">
+                        <span class="status available">Disponible</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pan de Masa Madre</h3>
+                        <p>Corteza crujiente y miga suave con el toque ácido perfecto.</p>
+                        <div class="product-footer">
+                            <span class="price">$4.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/croissants.png" alt="Croissants de Mantequilla">
+                        <span class="status available">Disponible</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissants Franceses</h3>
+                        <p>Laminados a mano con mantequilla premium para una textura hojaldrada.</p>
+                        <div class="product-footer">
+                            <span class="price">$2.75</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/eclairs.png" alt="Eclairs de Chocolate">
+                        <span class="status available">Disponible</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Eclairs de Chocolate</h3>
+                        <p>Rellenos de crema pastelera y cubiertos con ganache de chocolate belga.</p>
+                        <div class="product-footer">
+                            <span class="price">$3.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/fruit_tart.png" alt="Tarta de Frutas">
+                        <span class="status sold-out">Agotado</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tarta de Frutas de Estación</h3>
+                        <p>Base de masa quebrada con crema de vainilla y frutas frescas.</p>
+                        <div class="product-footer">
+                            <span class="price">$5.25</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/cinnamon_rolls.png" alt="Rollos de Canela">
+                        <span class="status available">Disponible</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rollos de Canela</h3>
+                        <p>Suaves y esponjosos con un glaseado de queso crema irresistible.</p>
+                        <div class="product-footer">
+                            <span class="price">$3.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/muffins.png" alt="Muffins de Arándanos">
+                        <span class="status available">Disponible</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Muffins de Arándanos</h3>
+                        <p>Cargados de arándanos frescos y un toque de limón.</p>
+                        <div class="product-footer">
+                            <span class="price">$2.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Nosotros</h2>
+                    <p>En <strong>El Trigo de Oro</strong>, creemos que el pan es más que alimento; es una tradición que une familias. Desde 1985, hemos perfeccionado nuestras recetas utilizando procesos de fermentación lenta y granos locales.</p>
+                    <p>Nuestra misión es llevar la calidez de un horno tradicional a cada mesa, manteniendo la esencia de la panadería artesanal en un mundo moderno.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <span class="stat-label">Años de Tradición</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Natural</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                     <img src="assets/sourdough.png" alt="Nuestro Horno" class="rounded-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="logo">El Trigo de Oro</div>
+                <p>Panadería Artesanal & Repostería Fina.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>📍 Calle las Flores 123, Ciudad</li>
+                    <li>📞 +51 987 654 321</li>
+                    <li>✉️ hola@trigodeoro.com</li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h3>Horario</h3>
+                <p>Lun - Sáb: 7:00 AM - 8:00 PM</p>
+                <p>Dom: 7:00 AM - 1:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 El Trigo de Oro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>

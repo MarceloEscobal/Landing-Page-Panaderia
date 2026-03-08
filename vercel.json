@@ -1,0 +1,7 @@
+{
+  "name": "panaderia-artesanal",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/src/$1" }
+  ]
+}
