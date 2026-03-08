@@ -1,2 +1,9 @@
+node_modules
 .vercel
 .env*.local
+.next/
+dist/
+build/
+.vscode/
+.DS_Store
+package-lock.json
