@@ -56,54 +56,58 @@
             </div>
         </section>
 
-        <section id="productos" class="products container">
-            <h2 class="section-title">Nuestras Delicias</h2>
-            
-            <div class="filters-container">
-                <button class="filter-btn active" data-category="todos" onclick="filterCategory('todos')">Todos</button>
-                <button class="filter-btn" data-category="panes" onclick="filterCategory('panes')">Panes</button>
-                <button class="filter-btn" data-category="pasteleria" onclick="filterCategory('pasteleria')">Pastelería</button>
-                <button class="filter-btn" data-category="tortas" onclick="filterCategory('tortas')">Tortas</button>
-                <button class="filter-btn" data-category="postres" onclick="filterCategory('postres')">Postres</button>
-                <button class="filter-btn" data-category="embutidos" onclick="filterCategory('embutidos')">Embutidos</button>
-                <button class="filter-btn" data-category="bebidas" onclick="filterCategory('bebidas')">Bebidas</button>
-            </div>
+        <section id="productos" class="products">
+            <div class="container">
+                <h2 class="section-title">Nuestras Delicias</h2>
+                
+                <div class="filters-container">
+                    <button class="filter-btn active" data-category="todos" onclick="filterCategory('todos')">Todos</button>
+                    <button class="filter-btn" data-category="panes" onclick="filterCategory('panes')">Panes</button>
+                    <button class="filter-btn" data-category="pasteleria" onclick="filterCategory('pasteleria')">Pastelería</button>
+                    <button class="filter-btn" data-category="tortas" onclick="filterCategory('tortas')">Tortas</button>
+                    <button class="filter-btn" data-category="postres" onclick="filterCategory('postres')">Postres</button>
+                    <button class="filter-btn" data-category="embutidos" onclick="filterCategory('embutidos')">Embutidos</button>
+                    <button class="filter-btn" data-category="bebidas" onclick="filterCategory('bebidas')">Bebidas</button>
+                </div>
 
-            <div id="product-grid" class="product-grid">
-                <!-- Se llenará dinámicamente con JS -->
+                <div id="product-grid" class="product-grid">
+                    <!-- Se llenará dinámicamente con JS -->
+                </div>
             </div>
         </section>
 
-        <section class="testimonials container">
-            <h2 class="section-title">La Voz de Nuestros Clientes</h2>
-            <div class="swiper-container testimonials-slider">
-                <div class="swiper-wrapper">
-                    <!-- Sample Testimonial 1 -->
-                    <div class="swiper-slide card">
-                        <div class="testimonial-card" data-aos="zoom-in">
-                            <img src="https://i.pravatar.cc/150?u=1" alt="Cliente 1" class="testimonial-img">
-                            <p>"El mejor pan de masa madre de Trujillo. Se nota la calidad en cada bocado."</p>
-                            <h4>Maria Rodríguez</h4>
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">La Voz de Nuestros Clientes</h2>
+                <div class="swiper-container testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Sample Testimonial 1 -->
+                        <div class="swiper-slide card">
+                            <div class="testimonial-card" data-aos="zoom-in">
+                                <img src="https://i.pravatar.cc/150?u=1" alt="Cliente 1" class="testimonial-img">
+                                <p>"El mejor pan de masa madre de Trujillo. Se nota la calidad en cada bocado."</p>
+                                <h4>Maria Rodríguez</h4>
+                            </div>
+                        </div>
+                        <!-- Sample Testimonial 2 -->
+                        <div class="swiper-slide card">
+                            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+                                <img src="https://i.pravatar.cc/150?u=2" alt="Cliente 2" class="testimonial-img">
+                                <p>"Los croissants me recordaron a mi viaje a Francia. ¡Simplemente espectaculares!"</p>
+                                <h4>Juan Pérez</h4>
+                            </div>
+                        </div>
+                        <!-- Sample Testimonial 3 -->
+                        <div class="swiper-slide card">
+                            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
+                                <img src="https://i.pravatar.cc/150?u=3" alt="Cliente 3" class="testimonial-img">
+                                <p>"Excelente atención y los postres son de otro nivel. Totalmente recomendado."</p>
+                                <h4>Lucía Sánchez</h4>
+                            </div>
                         </div>
                     </div>
-                    <!-- Sample Testimonial 2 -->
-                    <div class="swiper-slide card">
-                        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
-                            <img src="https://i.pravatar.cc/150?u=2" alt="Cliente 2" class="testimonial-img">
-                            <p>"Los croissants me recordaron a mi viaje a Francia. ¡Simplemente espectaculares!"</p>
-                            <h4>Juan Pérez</h4>
-                        </div>
-                    </div>
-                    <!-- Sample Testimonial 3 -->
-                    <div class="swiper-slide card">
-                        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="400">
-                            <img src="https://i.pravatar.cc/150?u=3" alt="Cliente 3" class="testimonial-img">
-                            <p>"Excelente atención y los postres son de otro nivel. Totalmente recomendado."</p>
-                            <h4>Lucía Sánchez</h4>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -125,9 +129,11 @@
             </div>
         </section>
 
-        <section class="container">
-            <h2 class="section-title">Encuéntranos</h2>
-            <div id="map"></div>
+        <section class="map-section section">
+            <div class="container">
+                <h2 class="section-title">Encuéntranos</h2>
+                <div id="map"></div>
+            </div>
         </section>
     </main>
 

@@ -8,7 +8,7 @@ const products = [
         description: "Corteza crujiente y miga suave con el toque ácido perfecto.",
         price: 16.50,
         category: "panes",
-        image: "assets/sourdough.png",
+        image: "https://images.unsplash.com/photo-1585478259715-876a6a81fc08?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -17,7 +17,7 @@ const products = [
         description: "Laminados a mano con mantequilla premium para una textura hojaldrada.",
         price: 10.50,
         category: "pasteleria",
-        image: "assets/croissants.png",
+        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -26,7 +26,7 @@ const products = [
         description: "Rellenos de crema pastelera y cubiertos con ganache de chocolate belga.",
         price: 13.00,
         category: "pasteleria",
-        image: "assets/eclairs.png",
+        image: "https://images.unsplash.com/photo-1510252554792-74d6434316ae?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -35,7 +35,7 @@ const products = [
         description: "Base de masa quebrada con crema de vainilla y frutas frescas.",
         price: 19.50,
         category: "pasteleria",
-        image: "assets/fruit_tart.png",
+        image: "https://images.unsplash.com/photo-1464305795204-6f5bdf7f8740?auto=format&fit=crop&w=500&q=80",
         available: false
     },
     {
@@ -44,7 +44,7 @@ const products = [
         description: "Suaves y esponjosos con un glaseado de queso crema irresistible.",
         price: 11.00,
         category: "pasteleria",
-        image: "assets/cinnamon_rolls.png",
+        image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -53,7 +53,7 @@ const products = [
         description: "Cargados de arándanos frescos y un toque de limón.",
         price: 9.50,
         category: "pasteleria",
-        image: "assets/muffins.png",
+        image: "https://images.unsplash.com/photo-1607958674115-05b148067426?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -62,7 +62,7 @@ const products = [
         description: "Clásica torta de chocolate con crema y cerezas.",
         price: 45.00,
         category: "tortas",
-        image: "assets/black_forest.png",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -71,7 +71,7 @@ const products = [
         description: "Base crocante con crema suave y reducción de maracuyá.",
         price: 18.00,
         category: "postres",
-        image: "assets/cheesecake.png",
+        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -80,7 +80,7 @@ const products = [
         description: "Artesanal, con el toque justo de especias.",
         price: 12.50,
         category: "embutidos",
-        image: "assets/jamon.png",
+        image: "https://images.unsplash.com/photo-1544333331-5079a4959db6?auto=format&fit=crop&w=500&q=80",
         available: true
     },
     {
@@ -89,7 +89,7 @@ const products = [
         description: "Granos selectos recién molidos.",
         price: 6.50,
         category: "bebidas",
-        image: "assets/coffee.png",
+        image: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=500&q=80",
         available: true
     }
 ];

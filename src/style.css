@@ -10,32 +10,72 @@
     --glass: rgba(255, 255, 255, 0.8);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --container-width: 1200px;
+    --max-width: 1400px;
 }
 
 [data-theme="dark"] {
     --bg-light: #000000;
-    --text-main: #ffffff;
-    --text-muted: #e0e0e0;
+    --text-main: #ffffff !important;
+    --text-muted: #f0f0f0 !important;
     --white: #121212;
-    --glass: rgba(0, 0, 0, 0.9);
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-    --primary-dark: #d4a373;
-    --primary: #be9c91;
+    --glass: rgba(0, 0, 0, 0.95);
+    --shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+    --primary-dark: #e6b38c;
+    --primary: #d4a373;
 }
 
-[data-theme="dark"] .product-info h3, 
-[data-theme="dark"] .product-info p,
-[data-theme="dark"] .section-title,
-[data-theme="dark"] .nav-links a {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+[data-theme="dark"] body {
+    background-color: #000000;
+    color: #ffffff;
 }
 
-[data-theme="dark"] .hero h1,
-[data-theme="dark"] .hero p {
+[data-theme="dark"] section,
+[data-theme="dark"] header,
+[data-theme="dark"] footer,
+[data-theme="dark"] .products,
+[data-theme="dark"] .testimonials {
+    background-color: #000000 !important;
+}
+
+[data-theme="dark"] .about {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] .testimonial-card {
+    background-color: #121212 !important;
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] p, 
+[data-theme="dark"] span:not(.status), 
+[data-theme="dark"] a,
+[data-theme="dark"] li {
     color: #ffffff !important;
-    font-weight: 700;
+}
+
+[data-theme="dark"] .product-card {
+    background: #1e1e1e;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .hero::before {
+    background: rgba(0,0,0,0.7); /* Darken hero overlay */
+}
+
+[data-theme="dark"] .about-text h2::after {
+    background: var(--accent);
+}
+
+[data-theme="dark"] .filter-btn {
+    border-color: rgba(255,255,255,0.3);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .testimonial-card {
+    background: #1e1e1e;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 * {
@@ -62,9 +102,10 @@ h1, h2, h3, .logo {
 }
 
 .container {
-    max-width: var(--container-width);
+    width: 95%;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 /* Header & Navigation */
@@ -283,7 +324,7 @@ nav {
 /* About Section */
 .about {
     padding: 8rem 0;
-    background: #fdf8e1;
+    background: transparent;
 }
 
 .about-grid {
