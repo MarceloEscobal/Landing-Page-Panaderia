@@ -8,7 +8,7 @@ const products = [
         description: "Corteza crujiente y miga suave con el toque ácido perfecto.",
         price: 16.50,
         category: "panes",
-        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1589367920969-ab8e05030bc2?w=800&q=80",
         available: true
     },
     {
@@ -31,11 +31,11 @@ const products = [
     },
     {
         id: 4,
-        name: "Tarta de Frutas",
+        name: "Tarta de Frustas",
         description: "Frutas frescas de la mejor calidad.",
         price: 19.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1464305795204-6f5bdf7f8740?w=800&q=80",
         available: false
     },
     {
@@ -53,7 +53,7 @@ const products = [
         description: "Cargados de arándanos frescos.",
         price: 9.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1557089706-68d02dbda27e?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1607958674115-05b148067426?w=800&q=80",
         available: true
     },
     {
