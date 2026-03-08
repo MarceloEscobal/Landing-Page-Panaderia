@@ -1,18 +1,17 @@
-## Getting Started
+# Panadería Artesanal - El Trigo de Oro
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Landing page para la Panadería "El Trigo de Oro", enfocada en mostrar productos artesanales y facilitar pedidos vía WhatsApp.
 
-## Folder Structure
+## Características
+- Diseño premium y responsivo.
+- Integración con WhatsApp para pedidos directos.
+- Precios actualizados en Soles (S/).
+- Botón flotante de contacto permanente.
 
-The workspace contains two folders by default, where:
+## Tecnologías
+- HTML5
+- CSS3 (Vanilla)
+- Vercel para el despliegue automático.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Despliegue
+El sitio se despliega automáticamente en Vercel al hacer push a la rama `main`.
