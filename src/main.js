@@ -8,79 +8,79 @@ const products = [
         description: "Corteza crujiente y miga suave con el toque ácido perfecto.",
         price: 16.50,
         category: "panes",
-        image: "https://images.unsplash.com/photo-1585478259715-876a6a81fc08?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
         available: true
     },
     {
         id: 2,
         name: "Croissants Franceses",
-        description: "Laminados a mano con mantequilla premium para una textura hojaldrada.",
+        description: "Laminados a mano con mantequilla premium.",
         price: 10.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80",
         available: true
     },
     {
         id: 3,
         name: "Eclairs de Chocolate",
-        description: "Rellenos de crema pastelera y cubiertos con ganache de chocolate belga.",
+        description: "Cubiertos con ganache de chocolate belga.",
         price: 13.00,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1510252554792-74d6434316ae?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1510252554792-74d6434316ae?w=800&q=80",
         available: true
     },
     {
         id: 4,
-        name: "Tarta de Frutas de Estación",
-        description: "Base de masa quebrada con crema de vainilla y frutas frescas.",
+        name: "Tarta de Frutas",
+        description: "Frutas frescas de la mejor calidad.",
         price: 19.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1464305795204-6f5bdf7f8740?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80",
         available: false
     },
     {
         id: 5,
         name: "Rollos de Canela",
-        description: "Suaves y esponjosos con un glaseado de queso crema irresistible.",
+        description: "Suaves con glaseado de queso crema.",
         price: 11.00,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=80",
         available: true
     },
     {
         id: 6,
         name: "Muffins de Arándanos",
-        description: "Cargados de arándanos frescos y un toque de limón.",
+        description: "Cargados de arándanos frescos.",
         price: 9.50,
         category: "pasteleria",
-        image: "https://images.unsplash.com/photo-1607958674115-05b148067426?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1557089706-68d02dbda27e?w=800&q=80",
         available: true
     },
     {
         id: 7,
         name: "Selva Negra",
-        description: "Clásica torta de chocolate con crema y cerezas.",
+        description: "Chocolate, crema y cerezas.",
         price: 45.00,
         category: "tortas",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
         available: true
     },
     {
         id: 8,
-        name: "Cheesecake de Maracuyá",
-        description: "Base crocante con crema suave y reducción de maracuyá.",
+        name: "Cheesecake",
+        description: "Suave crema con reducción de maracuyá.",
         price: 18.00,
         category: "postres",
-        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1524351114678-838bc863388a?w=800&q=80",
         available: true
     },
     {
         id: 9,
-        name: "Jamón del País",
-        description: "Artesanal, con el toque justo de especias.",
+        name: "Jamón Artesanal",
+        description: "Especial con toque de especias.",
         price: 12.50,
         category: "embutidos",
-        image: "https://images.unsplash.com/photo-1544333331-5079a4959db6?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1601356616077-6957284f72f1?w=800&q=80",
         available: true
     },
     {
@@ -89,7 +89,7 @@ const products = [
         description: "Granos selectos recién molidos.",
         price: 6.50,
         category: "bebidas",
-        image: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=500&q=80",
+        image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80",
         available: true
     }
 ];

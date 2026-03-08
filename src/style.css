@@ -150,6 +150,70 @@ nav {
     color: var(--primary);
 }
 
+/* Header Responsiveness Fix */
+@media (max-width: 900px) {
+    .shop-status {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background: var(--primary-dark);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-trigger {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -483,6 +547,19 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .about-text h2::after {
+        margin: 1rem auto 0;
     }
 }
 
